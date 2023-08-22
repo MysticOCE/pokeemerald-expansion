@@ -1117,10 +1117,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_WEEDLE] =
     {
-        .baseHP        = 40,
-        .baseAttack    = 35,
-        .baseDefense   = 30,
-        .baseSpeed     = 50,
+        .baseHP        = 50,
+        .baseAttack    = 55,
+        .baseDefense   = 40,
+        .baseSpeed     = 65,
         .baseSpAttack  = 20,
         .baseSpDefense = 20,
         .types = { TYPE_BUG, TYPE_POISON },
@@ -1139,12 +1139,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_KAKUNA] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 25,
-        .baseDefense   = 50,
-        .baseSpeed     = 35,
+        .baseHP        = 75,
+        .baseAttack    = 55,
+        .baseDefense   = 60,
+        .baseSpeed     = 45,
         .baseSpAttack  = 25,
-        .baseSpDefense = 25,
+        .baseSpDefense = 65,
         .types = { TYPE_BUG, TYPE_POISON },
         .catchRate = 120,
         .expYield = 72,
@@ -1161,13 +1161,13 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_BEEDRILL] =
     {
-        .baseHP        = 65,
-        .baseDefense   = 40,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 45,
-        .baseSpDefense = 80,
+        .baseHP        = 80,
+        .baseDefense   = 55,
+        .baseSpeed     = 95,
+        .baseSpAttack  = 55,
+        .baseSpDefense = 100,
         #if P_UPDATED_STATS >= GEN_6
-            .baseAttack    = 90,
+            .baseAttack    = 120,
         #else
             .baseAttack    = 80,
         #endif
@@ -1182,7 +1182,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG},
-        .abilities = {ABILITY_SWARM, ABILITY_NONE, ABILITY_SNIPER},
+        .abilities = {ABILITY_ADAPTABILITY, ABILITY_NONE, ABILITY_SNIPER},
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
@@ -19587,7 +19587,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_YAMPER] =
     {
-        .baseHP        = 59,
+        .baseHP        = 60,
         .baseAttack    = 45,
         .baseDefense   = 50,
         .baseSpeed     = 26,
@@ -19609,7 +19609,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_BOLTUND] =
     {
-        .baseHP        = 69,
+        .baseHP        = 70,
         .baseAttack    = 90,
         .baseDefense   = 60,
         .baseSpeed     = 121,
