@@ -6,8 +6,8 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_CHARMELEON]            = {{EVO_LEVEL, 36, SPECIES_CHARIZARD}},
     [SPECIES_SQUIRTLE]              = {{EVO_LEVEL, 16, SPECIES_WARTORTLE}},
     [SPECIES_WARTORTLE]             = {{EVO_LEVEL, 36, SPECIES_BLASTOISE}},
-    [SPECIES_CATERPIE]              = {{EVO_LEVEL, 7, SPECIES_METAPOD}},
-    [SPECIES_METAPOD]               = {{EVO_LEVEL, 10, SPECIES_BUTTERFREE}},
+    [SPECIES_CATERPIE]              = {{EVO_LEVEL, 15, SPECIES_METAPOD}},
+    [SPECIES_METAPOD]               = {{EVO_LEVEL, 30, SPECIES_BUTTERFREE}},
     [SPECIES_WEEDLE]                = {{EVO_LEVEL, 7, SPECIES_KAKUNA}},
     [SPECIES_KAKUNA]                = {{EVO_LEVEL, 10, SPECIES_BEEDRILL}},
     [SPECIES_PIDGEY]                = {{EVO_LEVEL, 18, SPECIES_PIDGEOTTO}},
@@ -274,8 +274,8 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
                                        {EVO_ITEM_MALE, ITEM_DAWN_STONE, SPECIES_GALLADE}
                                     #endif
                                        },
-    [SPECIES_BAGON]                 = {{EVO_LEVEL, 30, SPECIES_SHELGON}},
-    [SPECIES_SHELGON]               = {{EVO_LEVEL, 50, SPECIES_SALAMENCE}},
+    [SPECIES_BAGON]                 = {{EVO_LEVEL, 18, SPECIES_SHELGON}},
+    [SPECIES_SHELGON]               = {{EVO_LEVEL, 32, SPECIES_SALAMENCE}},
     [SPECIES_BELDUM]                = {{EVO_LEVEL, 20, SPECIES_METANG}},
     [SPECIES_METANG]                = {{EVO_LEVEL, 45, SPECIES_METAGROSS}},
 #if P_GEN_4_POKEMON == TRUE
