@@ -1,3 +1,20 @@
+RustboroCity_OddTMMerchant::
+	lock
+	message RustboroCity_OddTMMerchant_Text_0
+	waitmessage
+	pokemart RustboroTMMerchant
+	msgbox RustboroCity_OddTMMerchant_Text_1
+	release
+	return
+
+
+	.align 2
+RustboroTMMerchant:
+	.2byte ITEM_TM51
+	.2byte ITEM_TM52
+	.2byte ITEM_TM53
+	.2byte ITEM_NONE
+
 .set LOCALID_LITTLE_BOY, 7
 .set LOCALID_LITTLE_GIRL, 8
 .set LOCALID_DEVON_EMPLOYEE, 9
@@ -1297,3 +1314,10 @@ RustboroCity_Text_YouCanHave2On2Battle:
 	.string "they'll both challenge you.\p"
 	.string "Don't you think it'd be cool if you\n"
 	.string "could beat two TRAINERS by yourself?$"
+
+RustboroCity_OddTMMerchant_Text_0:
+	.string "Howdy there. In the market for some\n"
+	.string "rare TMs?$"
+
+RustboroCity_OddTMMerchant_Text_1:
+	.string "See you around.$"

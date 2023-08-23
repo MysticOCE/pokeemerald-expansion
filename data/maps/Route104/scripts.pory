@@ -1,5 +1,5 @@
 script Route104_EventScript_IvanNew{
-	msgbox("I've had no luck with the fish today... I'm starting to think I should reconsider my hobbies.")
+	msgbox(format("I've had no luck with the fish today... I'm starting to think I should reconsider my hobbies."))
 	end
 	}
 

@@ -1177,4 +1177,6 @@ Route104_Text_BrendanPostBattle:
 	.string "become friends with your POKéMON.$"
 
 Route104_EventScript_IvanNew_Text_0:
-	.string "I've had no luck with the fish today... I'm starting to think I should reconsider my hobbies.$"
+	.string "I've had no luck with the fish today...\n"
+	.string "I'm starting to think I should\l"
+	.string "reconsider my hobbies.$"

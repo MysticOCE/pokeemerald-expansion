@@ -1,3 +1,18 @@
+script RustboroCity_OddTMMerchant {
+	lock
+	message(format("Howdy there. In the market for some rare TMs?"))
+	waitmessage
+	pokemart(RustboroTMMerchant)
+	msgbox("See you around.")
+	release
+}
+
+mart RustboroTMMerchant {
+	ITEM_TM51
+	ITEM_TM52
+	ITEM_TM53
+}
+
 raw `
 .set LOCALID_LITTLE_BOY, 7
 .set LOCALID_LITTLE_GIRL, 8

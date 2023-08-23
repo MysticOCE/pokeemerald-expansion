@@ -3275,14 +3275,20 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
-static const u8 sTM51Desc[] = _( // Todo
-    "?????");
+static const u8 sTM51Desc[] = _( // Icy Wind
+    "A chilling attack\n" 
+	"that lowers the\n"
+	"foe's Speed. ");
 
-static const u8 sTM52Desc[] = _( // Todo
-    "?????");
+static const u8 sTM52Desc[] = _( // Pursuit
+    "Inflicts bad damage\n"
+	"if used on a foe\n" 
+	"switching out. ");
 
-static const u8 sTM53Desc[] = _( // Todo
-    "?????");
+static const u8 sTM53Desc[] = _( // Vacuum Wave
+    "Shoots a wave out.\n"
+	"This move always\n"
+	"strikes first.");
 
 static const u8 sTM54Desc[] = _( // Todo
     "?????");
