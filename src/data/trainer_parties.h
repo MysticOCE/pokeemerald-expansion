@@ -8773,11 +8773,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ashley[] = {
     }
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_WallyPetalburg[] = {
+    {
+    .iv = 50,
+    .lvl = 8,
+    .species = SPECIES_RALTS,
+    }
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_WallyMauville[] = {
     {
-    .iv = 30,
+    .iv = 50,
     .lvl = 16,
-    .species = SPECIES_RALTS,
+    .species = SPECIES_KIRLIA,
     }
 };
 

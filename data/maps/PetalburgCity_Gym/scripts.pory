@@ -1,7 +1,85 @@
+script PetalburgCity_Gym_EventScript_NormanNew {
+	lock
+	faceplayer
+	switch (var(VAR_PETALBURG_GYM_STATE)){
+		case 2:
+			call(PetalburgCity_Gym_EventScript_NormanNoBadges)
+		case 3:
+			call(PetalburgCity_Gym_EventScript_NormanOneBadge)
+		case 4:
+			call(PetalburgCity_Gym_EventScript_NormanTwoBadges)
+		case 5:
+			call(PetalburgCity_Gym_EventScript_NormanThreeBadges)
+		case 6:
+			call(PetalburgCity_Gym_EventScript_NormanBattle)
+		case 7:
+			call(PetalburgCity_Gym_EventScript_NormanPostBattle)
+		case 8:
+			call(PetalburgCity_Gym_EventScript_NormanRematch)
+		default:
+			//this is the case for when you first enter the gym
+			call(PetalburgCity_Gym_ReplacedWallyEvent)
+	}
+	release
+	end
+}
+
+script PetalburgCity_Gym_ReplacedWallyEvent {
+	msgbox(PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon)
+	closemessage
+	clearflag(FLAG_HIDE_PETALBURG_GYM_WALLY)
+	addobject(LOCALID_WALLY)
+	playse(SE_DOOR)
+	if(var(VAR_FACING) == DIR_NORTH) {
+		applymovement(LOCALID_WALLY, PetalburgCity_Gym_Movement_WallyArriveNorth)
+		applymovement(LOCALID_NORMAN, Common_Movement_WalkInPlaceFasterRight)
+	}
+	else{
+		applymovement(LOCALID_WALLY, PetalburgCity_Gym_Movement_WallyArrive)
+		applymovement(LOCALID_NORMAN, Common_Movement_WalkInPlaceFasterDown)
+
+	}
+	waitmovement(0)
+	msgbox(format("I- I did it! I caught a Pokemon just like you told me how! Here's your Pokemon back, sir."))
+	msgbox(format("Good job, Wally. Ah, right."))
+	faceplayer
+	msgbox(format("Wally here is another trainer getting their first Pokemon, just like you, {PLAYER}. Say, this might be a good opportunity for the both of you. How about you have a battle?"))
+	msgbox(format("O-Okay... I can do this!"))
+	trainerbattle_no_intro(TRAINER_WALLY_PETALBURG, PetalburgCity_Gym_Text_WallyDefeat)
+	//need a custom wally leave for both of these
+	msgbox(format("That was a little lively than I thought it'd be. Good job, the both of you."))
+	msgbox(format("Okay... Next time, I won't lose. But I think I need to get going now."))
+	if(var(VAR_FACING) == DIR_NORTH) { 
+		applymovement(LOCALID_WALLY, WallyLeaveNorth)
+	}
+	else {
+		applymovement(LOCALID_WALLY, WallyLeaveOther)
+	}
+	removeobject(LOCALID_WALLY)
+	msgbox(format("Now then. You're already growing faster than I expected but you'll need a little more experience before you can challenge me. Head north to Rustboro for your first gym challenge. Before you head out, you can take this as well."))
+	giveitem(ITEM_OLD_ROD)
+	setflag(FLAG_RECEIVED_OLD_ROD)
+	msgbox(format("It's been a long time since I went fishing. It's better off with you than just laying around here. Good luck with your other gym battles and take care."))
+	setvar(VAR_PETALBURG_GYM_STATE, 2)
+	setflag(FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM)
+	setvar(VAR_PETALBURG_CITY_STATE, 3)
+	setflag(FLAG_HIDE_PETALBURG_GYM_WALLY)
+}
+
+movement WallyLeaveNorth{
+	walk_down * 4
+}
+movement WallyLeaveOther{
+	walk_down * 3
+}
+
 raw `
 .set LOCALID_NORMAN, 1
 .set LOCALID_WALLY, 10
 .set LOCALID_WALLYS_DAD, 11
+
+PetalburgCity_Gym_Text_WallyDefeat:
+	.string "I guess I've got a lot to learn...$"
 
 PetalburgCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PetalburgCity_Gym_OnLoad

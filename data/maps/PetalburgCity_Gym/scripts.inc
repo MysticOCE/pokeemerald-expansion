@@ -1,6 +1,112 @@
+PetalburgCity_Gym_EventScript_NormanNew::
+	lock
+	faceplayer
+	switch VAR_PETALBURG_GYM_STATE
+	case 2, PetalburgCity_Gym_EventScript_NormanNew_3
+	case 3, PetalburgCity_Gym_EventScript_NormanNew_4
+	case 4, PetalburgCity_Gym_EventScript_NormanNew_5
+	case 5, PetalburgCity_Gym_EventScript_NormanNew_6
+	case 6, PetalburgCity_Gym_EventScript_NormanNew_7
+	case 7, PetalburgCity_Gym_EventScript_NormanNew_8
+	case 8, PetalburgCity_Gym_EventScript_NormanNew_9
+	call PetalburgCity_Gym_ReplacedWallyEvent
+PetalburgCity_Gym_EventScript_NormanNew_1:
+	release
+	end
+
+PetalburgCity_Gym_EventScript_NormanNew_3:
+	call PetalburgCity_Gym_EventScript_NormanNoBadges
+	goto PetalburgCity_Gym_EventScript_NormanNew_1
+
+PetalburgCity_Gym_EventScript_NormanNew_4:
+	call PetalburgCity_Gym_EventScript_NormanOneBadge
+	goto PetalburgCity_Gym_EventScript_NormanNew_1
+
+PetalburgCity_Gym_EventScript_NormanNew_5:
+	call PetalburgCity_Gym_EventScript_NormanTwoBadges
+	goto PetalburgCity_Gym_EventScript_NormanNew_1
+
+PetalburgCity_Gym_EventScript_NormanNew_6:
+	call PetalburgCity_Gym_EventScript_NormanThreeBadges
+	goto PetalburgCity_Gym_EventScript_NormanNew_1
+
+PetalburgCity_Gym_EventScript_NormanNew_7:
+	call PetalburgCity_Gym_EventScript_NormanBattle
+	goto PetalburgCity_Gym_EventScript_NormanNew_1
+
+PetalburgCity_Gym_EventScript_NormanNew_8:
+	call PetalburgCity_Gym_EventScript_NormanPostBattle
+	goto PetalburgCity_Gym_EventScript_NormanNew_1
+
+PetalburgCity_Gym_EventScript_NormanNew_9:
+	call PetalburgCity_Gym_EventScript_NormanRematch
+	goto PetalburgCity_Gym_EventScript_NormanNew_1
+
+
+PetalburgCity_Gym_ReplacedWallyEvent::
+	msgbox PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon
+	closemessage
+	clearflag FLAG_HIDE_PETALBURG_GYM_WALLY
+	addobject LOCALID_WALLY
+	playse SE_DOOR
+	compare VAR_FACING, DIR_NORTH
+	goto_if_eq PetalburgCity_Gym_ReplacedWallyEvent_2
+	applymovement LOCALID_WALLY, PetalburgCity_Gym_Movement_WallyArrive
+	applymovement LOCALID_NORMAN, Common_Movement_WalkInPlaceFasterDown
+PetalburgCity_Gym_ReplacedWallyEvent_1:
+	waitmovement 0
+	msgbox PetalburgCity_Gym_ReplacedWallyEvent_Text_0
+	msgbox PetalburgCity_Gym_ReplacedWallyEvent_Text_1
+	faceplayer
+	msgbox PetalburgCity_Gym_ReplacedWallyEvent_Text_2
+	msgbox PetalburgCity_Gym_ReplacedWallyEvent_Text_3
+	trainerbattle_no_intro TRAINER_WALLY_PETALBURG, PetalburgCity_Gym_Text_WallyDefeat
+	msgbox PetalburgCity_Gym_ReplacedWallyEvent_Text_4
+	msgbox PetalburgCity_Gym_ReplacedWallyEvent_Text_5
+	compare VAR_FACING, DIR_NORTH
+	goto_if_eq PetalburgCity_Gym_ReplacedWallyEvent_6
+	applymovement LOCALID_WALLY, WallyLeaveOther
+PetalburgCity_Gym_ReplacedWallyEvent_5:
+	removeobject LOCALID_WALLY
+	msgbox PetalburgCity_Gym_ReplacedWallyEvent_Text_6
+	giveitem ITEM_OLD_ROD
+	setflag FLAG_RECEIVED_OLD_ROD
+	msgbox PetalburgCity_Gym_ReplacedWallyEvent_Text_7
+	setvar VAR_PETALBURG_GYM_STATE, 2
+	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM
+	setvar VAR_PETALBURG_CITY_STATE, 3
+	setflag FLAG_HIDE_PETALBURG_GYM_WALLY
+	return
+
+PetalburgCity_Gym_ReplacedWallyEvent_2:
+	applymovement LOCALID_WALLY, PetalburgCity_Gym_Movement_WallyArriveNorth
+	applymovement LOCALID_NORMAN, Common_Movement_WalkInPlaceFasterRight
+	goto PetalburgCity_Gym_ReplacedWallyEvent_1
+
+PetalburgCity_Gym_ReplacedWallyEvent_6:
+	applymovement LOCALID_WALLY, WallyLeaveNorth
+	goto PetalburgCity_Gym_ReplacedWallyEvent_5
+
+
+WallyLeaveNorth:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+WallyLeaveOther:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
 .set LOCALID_NORMAN, 1
 .set LOCALID_WALLY, 10
 .set LOCALID_WALLYS_DAD, 11
+
+PetalburgCity_Gym_Text_WallyDefeat:
+	.string "I guess I've got a lot to learn...$"
 
 PetalburgCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PetalburgCity_Gym_OnLoad
@@ -1592,3 +1698,43 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons:
 	.string "capable of battle?\p"
 	.string "Sorry, but you'll have to come back\n"
 	.string "with at least two POKéMON.$"
+
+PetalburgCity_Gym_ReplacedWallyEvent_Text_0:
+	.string "I- I did it! I caught a Pokemon just like\n"
+	.string "you told me how! Here's your Pokemon\l"
+	.string "back, sir.$"
+
+PetalburgCity_Gym_ReplacedWallyEvent_Text_1:
+	.string "Good job, Wally. Ah, right.$"
+
+PetalburgCity_Gym_ReplacedWallyEvent_Text_2:
+	.string "Wally here is another trainer getting\n"
+	.string "their first Pokemon, just like you,\l"
+	.string "{PLAYER}. Say, this might be a good\l"
+	.string "opportunity for the both of you. How\l"
+	.string "about you have a battle?$"
+
+PetalburgCity_Gym_ReplacedWallyEvent_Text_3:
+	.string "O-Okay... I can do this!$"
+
+PetalburgCity_Gym_ReplacedWallyEvent_Text_4:
+	.string "That was a little lively than I thought\n"
+	.string "it'd be. Good job, the both of you.$"
+
+PetalburgCity_Gym_ReplacedWallyEvent_Text_5:
+	.string "Okay... Next time, I won't lose. But I\n"
+	.string "think I need to get going now.$"
+
+PetalburgCity_Gym_ReplacedWallyEvent_Text_6:
+	.string "Now then. You're already growing faster\n"
+	.string "than I expected but you'll need a\l"
+	.string "little more experience before you can\l"
+	.string "challenge me. Head north to Rustboro\l"
+	.string "for your first gym challenge. Before\l"
+	.string "you head out, you can take this as well.$"
+
+PetalburgCity_Gym_ReplacedWallyEvent_Text_7:
+	.string "It's been a long time since I went\n"
+	.string "fishing. It's better off with you than\l"
+	.string "just laying around here. Good luck with\l"
+	.string "your other gym battles and take care.$"
