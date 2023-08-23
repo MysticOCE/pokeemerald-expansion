@@ -40,3 +40,7 @@ prefabs.json
 *.sym
 *.js
 porymap-windows-5.1.1/README.txt
+poryscript-windows/CHANGELOG.md
+poryscript-windows/font_config.json
+poryscript-windows/README.md
+tools/poryscript/font_config.json
