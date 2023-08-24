@@ -3290,8 +3290,10 @@ static const u8 sTM53Desc[] = _( // Vacuum Wave
 	"This move always\n"
 	"strikes first.");
 
-static const u8 sTM54Desc[] = _( // Todo
-    "?????");
+static const u8 sTM54Desc[] = _( // Hex
+    "Does doubled damage\n"
+	"to enemies with\n"
+	"status conditions.");
 
 static const u8 sTM55Desc[] = _( // Todo
     "?????");

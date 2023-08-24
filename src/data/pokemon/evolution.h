@@ -202,7 +202,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_COMBUSKEN]             = {{EVO_LEVEL, 36, SPECIES_BLAZIKEN}},
     [SPECIES_MUDKIP]                = {{EVO_LEVEL, 16, SPECIES_MARSHTOMP}},
     [SPECIES_MARSHTOMP]             = {{EVO_LEVEL, 36, SPECIES_SWAMPERT}},
-    [SPECIES_POOCHYENA]             = {{EVO_LEVEL, 18, SPECIES_MIGHTYENA}},
+    [SPECIES_POOCHYENA]             = {{EVO_LEVEL, 28, SPECIES_MIGHTYENA}},
     [SPECIES_ZIGZAGOON]             = {{EVO_LEVEL, 20, SPECIES_LINOONE}},
     [SPECIES_WURMPLE]               = {{EVO_LEVEL_SILCOON, 7, SPECIES_SILCOON},
                                        {EVO_LEVEL_CASCOON, 7, SPECIES_CASCOON}},

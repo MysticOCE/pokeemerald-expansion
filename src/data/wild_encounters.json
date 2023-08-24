@@ -16,8 +16,8 @@
             10,
             10,
             10,
-            5,
-            5
+            9,
+            1
           ]
         },
         {
@@ -1319,42 +1319,42 @@
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_POOCHYENA"
-              },
-              {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_WHISMUR"
-              },
-              {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_NINCADA"
+                "species": "SPECIES_LARVITAR"
               },
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_ABRA"
-              },
-              {
-                "min_level": 7,
-                "max_level": 7,
-                "species": "SPECIES_NINCADA"
+                "species": "SPECIES_LARVITAR"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_TAILLOW"
+                "species": "SPECIES_BAGON"
               },
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_TAILLOW"
+                "species": "SPECIES_BAGON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_PANCHAM"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_PANCHAM"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_TAILLOW"
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 7,
@@ -1367,9 +1367,9 @@
                 "species": "SPECIES_POOCHYENA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 12,
+                "species": "SPECIES_SPINDA"
               }
             ]
           }
@@ -1809,18 +1809,18 @@
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_CATERPIE"
+                "max_level": 6,
+                "species": "SPECIES_DROWZEE"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_WEEDLE"
+                "max_level": 6,
+                "species": "SPECIES_CUTIEFLY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_WEEDLE"
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_CUTIEFLY"
               }
             ]
           }

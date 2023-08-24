@@ -8332,6 +8332,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
+	//icy wind
     [ITEM_TM51] =
     {
         .name = _("TM51"),
@@ -8343,7 +8344,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-
+	//pursuit
     [ITEM_TM52] =
     {
         .name = _("TM52"),
@@ -8355,7 +8356,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-
+	//vacuum wave
     [ITEM_TM53] =
     {
         .name = _("TM53"),
@@ -8367,7 +8368,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-
+	//hex
     [ITEM_TM54] =
     {
         .name = _("TM54"),
