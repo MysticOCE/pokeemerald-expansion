@@ -1,3 +1,27 @@
+DewfordTown_EventScript_OldRodFishermanNew::
+	lock
+	faceplayer
+	goto_if_set FLAG_MUSCLE_BAND, DewfordTown_EventScript_OldRodFishermanNew_2
+DewfordTown_EventScript_OldRodFishermanNew_1:
+	msgbox DewfordTown_EventScript_OldRodFishermanNew_Text_0
+	waitmessage
+	giveitem ITEM_MUSCLE_BAND
+	setflag FLAG_MUSCLE_BAND
+	msgbox DewfordTown_EventScript_OldRodFishermanNew_Text_1
+	release
+	return
+
+DewfordTown_EventScript_OldRodFishermanNew_2:
+	goto DewfordTown_EventScript_OldRodFishermanNewGotBand
+	goto DewfordTown_EventScript_OldRodFishermanNew_1
+
+
+DewfordTown_EventScript_OldRodFishermanNewGotBand::
+	msgbox DewfordTown_EventScript_OldRodFishermanNewGotBand_Text_0
+	release
+	return
+
+
 @ Sailing to and from Dewford uses local IDs from different maps
 @ e.g. Route 104's sail to Dewford script references local IDs from Dewford's map
 @ All of these local IDs are labeled here
@@ -800,3 +824,15 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
+
+DewfordTown_EventScript_OldRodFishermanNew_Text_0:
+	.string "Oh, another fisher? Here's a little\n"
+	.string "something from me to you.$"
+
+DewfordTown_EventScript_OldRodFishermanNew_Text_1:
+	.string "You could also give it to your Pokemon\n"
+	.string "but I find this sort of thing useful\l"
+	.string "for fishing too!$"
+
+DewfordTown_EventScript_OldRodFishermanNewGotBand_Text_0:
+	.string "How's the fishing?$"

@@ -1,3 +1,22 @@
+script DewfordTown_EventScript_OldRodFishermanNew {
+	lock
+	faceplayer
+	if(flag(FLAG_MUSCLE_BAND)){
+		goto(DewfordTown_EventScript_OldRodFishermanNewGotBand)
+	}
+	msgbox(format("Oh, another fisher? Here's a little something from me to you."))
+	waitmessage
+	giveitem(ITEM_MUSCLE_BAND)
+	setflag(FLAG_MUSCLE_BAND)
+	msgbox(format("You could also give it to your Pokemon but I find this sort of thing useful for fishing too!"))
+	release
+}
+
+script DewfordTown_EventScript_OldRodFishermanNewGotBand {
+	msgbox("How's the fishing?")
+	release
+}
+
 raw `
 @ Sailing to and from Dewford uses local IDs from different maps
 @ e.g. Route 104's sail to Dewford script references local IDs from Dewford's map
