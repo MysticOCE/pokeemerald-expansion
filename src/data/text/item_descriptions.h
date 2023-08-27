@@ -3295,11 +3295,15 @@ static const u8 sTM54Desc[] = _( // Hex
 	"to enemies with\n"
 	"status conditions.");
 
-static const u8 sTM55Desc[] = _( // Todo
-    "?????");
+static const u8 sTM55Desc[] = _( // Draining Kiss
+    "Recovers 75% of the\n"
+	"damage dealt to the\n"
+	"user's HP.");
 
-static const u8 sTM56Desc[] = _( // Todo
-    "?????");
+static const u8 sTM56Desc[] = _( // Flame Charge
+    "Deals damage and\n"
+	"raises the user's\n"
+	"speed on hit.");
 
 static const u8 sTM57Desc[] = _( // Todo
     "?????");

@@ -8380,7 +8380,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-
+	//draining kiss
     [ITEM_TM55] =
     {
         .name = _("TM55"),
@@ -8392,7 +8392,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-
+	//flame charge
     [ITEM_TM56] =
     {
         .name = _("TM56"),

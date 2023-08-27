@@ -1,3 +1,28 @@
+SlateportCity_EventScript_OldTMMerchant::
+	lock
+	checkplayergender
+	compare VAR_RESULT, 0
+	goto_if_eq SlateportCity_EventScript_OldTMMerchant_2
+	message SlateportCity_EventScript_OldTMMerchant_Text_1
+SlateportCity_EventScript_OldTMMerchant_1:
+	waitmessage
+	pokemart SlateportTMMerchant
+	msgbox SlateportCity_EventScript_OldTMMerchant_Text_2
+	release
+	return
+
+SlateportCity_EventScript_OldTMMerchant_2:
+	message SlateportCity_EventScript_OldTMMerchant_Text_0
+	goto SlateportCity_EventScript_OldTMMerchant_1
+
+
+	.align 2
+SlateportTMMerchant:
+	.2byte ITEM_TM54
+	.2byte ITEM_TM55
+	.2byte ITEM_TM56
+	.2byte ITEM_NONE
+
 .set LOCALID_FAT_MAN, 1
 .set LOCALID_MAN_1, 2
 .set LOCALID_RICH_BOY, 3
@@ -1383,3 +1408,14 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+SlateportCity_EventScript_OldTMMerchant_Text_0:
+	.string "Morning, lad. Want to learn some new\n"
+	.string "tricks?$"
+
+SlateportCity_EventScript_OldTMMerchant_Text_1:
+	.string "Morning, lass. Want to learn some new\n"
+	.string "tricks?$"
+
+SlateportCity_EventScript_OldTMMerchant_Text_2:
+	.string "You stay safe out there, alright?$"

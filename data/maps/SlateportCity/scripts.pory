@@ -1,3 +1,27 @@
+script SlateportCity_EventScript_OldTMMerchant {
+	lock
+	checkplayergender
+	if(var(VAR_RESULT) == 0){
+		//male text
+		message(format("Morning, lad. Want to learn some new tricks?"))
+	}
+	else{
+		//female result
+		message(format("Morning, lass. Want to learn some new tricks?"))
+	}
+	waitmessage
+	pokemart(SlateportTMMerchant)
+	msgbox(format("You stay safe out there, alright?"))
+	release
+}
+
+mart SlateportTMMerchant{
+	ITEM_TM54
+	ITEM_TM55
+	ITEM_TM56
+}
+	
+
 raw `
 .set LOCALID_FAT_MAN, 1
 .set LOCALID_MAN_1, 2

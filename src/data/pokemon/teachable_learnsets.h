@@ -463,6 +463,7 @@ static const u16 sButterfreeTeachableLearnset[] = {
     MOVE_SUBSTITUTE,
     MOVE_SWAGGER,
     MOVE_SWIFT,
+	MOVE_ICY_WIND,
     MOVE_UNAVAILABLE,
 };
 
@@ -3907,6 +3908,7 @@ static const u16 sDrowzeeTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_THUNDER_WAVE,
 	MOVE_VACUUM_WAVE,
+	MOVE_ICY_WIND,
     MOVE_UNAVAILABLE,
 };
 
@@ -3959,6 +3961,7 @@ static const u16 sHypnoTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_THUNDER_WAVE,
 	MOVE_VACUUM_WAVE,
+	MOVE_ICY_WIND,
     MOVE_UNAVAILABLE,
 };
 
