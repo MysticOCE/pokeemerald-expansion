@@ -21,6 +21,32 @@ SlateportTMMerchant:
 	.2byte ITEM_TM54
 	.2byte ITEM_TM55
 	.2byte ITEM_TM56
+	.2byte ITEM_ABILITY_CAPSULE
+	.2byte ITEM_NONE
+
+	.align 2
+SlateportMintMaster:
+	.2byte ITEM_LONELY_MINT
+	.2byte ITEM_ADAMANT_MINT
+	.2byte ITEM_NAUGHTY_MINT
+	.2byte ITEM_BRAVE_MINT
+	.2byte ITEM_BOLD_MINT
+	.2byte ITEM_IMPISH_MINT
+	.2byte ITEM_LAX_MINT
+	.2byte ITEM_RELAXED_MINT
+	.2byte ITEM_MODEST_MINT
+	.2byte ITEM_MILD_MINT
+	.2byte ITEM_RASH_MINT
+	.2byte ITEM_QUIET_MINT
+	.2byte ITEM_CALM_MINT
+	.2byte ITEM_GENTLE_MINT
+	.2byte ITEM_CAREFUL_MINT
+	.2byte ITEM_SASSY_MINT
+	.2byte ITEM_TIMID_MINT
+	.2byte ITEM_HASTY_MINT
+	.2byte ITEM_JOLLY_MINT
+	.2byte ITEM_NAIVE_MINT
+	.2byte ITEM_SERIOUS_MINT
 	.2byte ITEM_NONE
 
 .set LOCALID_FAT_MAN, 1
@@ -123,6 +149,7 @@ SlateportCity_EventScript_ScottScene::
 	setflag FLAG_ENABLE_SCOTT_MATCH_CALL
 	msgbox SlateportCity_Text_KeepEyeOnTrainersBeSeeingYou, MSGBOX_DEFAULT
 	closemessage
+	giveitem ITEM_BLACK_SLUDGE
 	applymovement LOCALID_SCOTT, SlateportCity_Movement_ScottExit
 	waitmovement 0
 	removeobject LOCALID_SCOTT
@@ -166,7 +193,7 @@ SlateportCity_EventScript_EnergyGuru::
 	faceplayer
 	message SlateportCity_Text_EnergyGuruSellWhatYouNeed
 	waitmessage
-	pokemart SlateportCity_Pokemart_EnergyGuru
+	pokemart SlateportMintMaster
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
@@ -976,7 +1003,7 @@ SlateportCity_EventScript_BerryCrushRankingsSign::
 	end
 
 SlateportCity_Text_EnergyGuruSellWhatYouNeed:
-	.string "I'm the ENERGY GURU! I'll go for it and\n"
+	.string "I'm the Mint Master! I'll go for it and\n"
 	.string "sell you what you need!$"
 
 SlateportCity_Text_OhYourPokemon:
@@ -1396,6 +1423,9 @@ SlateportCity_Text_KeepEyeOnTrainersBeSeeingYou:
 	.string "on the talents of other people, too.\p"
 	.string "So, I'll be off to roam other towns\n"
 	.string "a bit more.\p"
+	.string "I'll leave you with this just\n"
+	.string "to see how you handle something\l"
+	.string "for more advanced trainers too.\p"
 	.string "Be seeing you, {PLAYER}{KUN}!$"
 
 SlateportCity_Text_TakingBattleTentChallenge:

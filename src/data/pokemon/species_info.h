@@ -2834,9 +2834,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseAttack    = 45,
         .baseDefense   = 55,
         .baseSpeed     = 45,
-        .baseSpAttack  = 45,
+        .baseSpAttack  = 70,
         .baseSpDefense = 70,
-        .types = { TYPE_WATER, TYPE_WATER },
+        .types = { TYPE_WATER, TYPE_ICE },
         .catchRate = 190,
         .expYield = 65,
         .evYield_SpDefense = 1,
@@ -2852,11 +2852,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_DEWGONG] =
     {
-        .baseHP        = 90,
+        .baseHP        = 100,
         .baseAttack    = 70,
         .baseDefense   = 80,
         .baseSpeed     = 70,
-        .baseSpAttack  = 70,
+        .baseSpAttack  = 95,
         .baseSpDefense = 95,
         .types = { TYPE_WATER, TYPE_ICE },
         .catchRate = 75,
@@ -2879,7 +2879,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseDefense   = 50,
         .baseSpeed     = 25,
         .baseSpAttack  = 40,
-        .baseSpDefense = 50,
+        .baseSpDefense = 60,
         .types = { TYPE_POISON, TYPE_POISON },
         .catchRate = 190,
         .expYield = 65,
@@ -2897,8 +2897,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_MUK] =
     {
-        .baseHP        = 105,
-        .baseAttack    = 105,
+        .baseHP        = 120,
+        .baseAttack    = 115,
         .baseDefense   = 75,
         .baseSpeed     = 50,
         .baseSpAttack  = 65,
@@ -13416,7 +13416,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_PETILIL] =
     {
-        .baseHP        = 45,
+        .baseHP        = 55,
         .baseAttack    = 35,
         .baseDefense   = 50,
         .baseSpeed     = 30,
@@ -13439,10 +13439,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_LILLIGANT] =
     {
-        .baseHP        = 70,
+        .baseHP        = 80,
         .baseAttack    = 60,
         .baseDefense   = 75,
-        .baseSpeed     = 90,
+        .baseSpeed     = 100,
         .baseSpAttack  = 110,
         .baseSpDefense = 75,
         .types = { TYPE_GRASS, TYPE_GRASS},
@@ -22568,7 +22568,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseDefense   = 50,
         .baseSpeed     = 25,
         .baseSpAttack  = 40,
-        .baseSpDefense = 50,
+        .baseSpDefense = 60,
         .types = { TYPE_POISON, TYPE_DARK},
         .catchRate = 190,
         .expYield = 65,
@@ -22587,8 +22587,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_MUK_ALOLAN] =
     {
-        .baseHP        = 105,
-        .baseAttack    = 105,
+        .baseHP        = 120,
+        .baseAttack    = 115,
         .baseDefense   = 75,
         .baseSpeed     = 50,
         .baseSpAttack  = 65,

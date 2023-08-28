@@ -222,22 +222,27 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst3[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum1[] = {
     {
-    .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_CARVANHA,
-    }
+    .iv = 10,
+    .lvl = 14,
+    .species = SPECIES_CORPHISH,
+    },
+	{
+	.iv = 10,
+	.lvl = 14,
+	.species = SPECIES_GIBLE,
+	}
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum2[] = {
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 14,
-    .species = SPECIES_ZUBAT,
+    .species = SPECIES_SKRELP,
     },
     {
-    .iv = 0,
+    .iv = 10,
     .lvl = 14,
-    .species = SPECIES_CARVANHA,
+    .species = SPECIES_DUCKLETT,
     }
 };
 
