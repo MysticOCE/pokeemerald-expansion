@@ -8404,7 +8404,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-
+	//body slam
     [ITEM_TM57] =
     {
         .name = _("TM57"),

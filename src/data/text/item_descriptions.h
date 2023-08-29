@@ -3305,8 +3305,10 @@ static const u8 sTM56Desc[] = _( // Flame Charge
 	"raises the user's\n"
 	"speed on hit.");
 
-static const u8 sTM57Desc[] = _( // Todo
-    "?????");
+static const u8 sTM57Desc[] = _( // Body Slam
+    "Deals damage and\n"
+	"and may paralyse\n"
+	"the opponent.");
 
 static const u8 sTM58Desc[] = _( // Todo
     "?????");

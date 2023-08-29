@@ -193,8 +193,10 @@ SlateportCity_EventScript_EnergyGuru::
 	faceplayer
 	message SlateportCity_Text_EnergyGuruSellWhatYouNeed
 	waitmessage
-	pokemart SlateportMintMaster
+	pokemart SlateportCity_Pokemart_EnergyGuru
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	setflag FLAG_SYS_NATIONAL_DEX
+	special EnableNationalPokedex
 	release
 	end
 
