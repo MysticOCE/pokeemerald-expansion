@@ -1,3 +1,10 @@
+script RustboroCity_BlackBelt_TypeChanges {
+	lock
+	msgbox(format("Hrm... Types sure are different from when I was in school. Nowadays, Ice resists Water, Fairy and is immune to Ice!\p Poison is immune to Poison and is effective against Water... \p Bug is resistant to Ghost and works okay against Ghost types... \p Normal types are um, resistant to Fairy attacks? \p I'll just keep repeating these to myself until I remember them..."))
+	release
+	end
+}
+
 script RustboroCity_OddTMMerchant {
 	lock
 	message(format("Howdy there. In the market for some rare TMs?"))

@@ -252,7 +252,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_DUSCLOPS]              = {{EVO_TRADE_ITEM, ITEM_REAPER_CLOTH, SPECIES_DUSKNOIR},
                                        {EVO_ITEM, ITEM_REAPER_CLOTH, SPECIES_DUSKNOIR}},
-    [SPECIES_ROSELIA]               = {{EVO_ITEM, ITEM_SHINY_STONE, SPECIES_ROSERADE}},
+    [SPECIES_ROSELIA]               = {{EVO_LEVEL, 50, SPECIES_ROSERADE}},
 #endif
     [SPECIES_SLAKOTH]               = {{EVO_LEVEL, 18, SPECIES_VIGOROTH}},
     [SPECIES_VIGOROTH]              = {{EVO_LEVEL, 36, SPECIES_SLAKING}},
@@ -292,7 +292,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_KRICKETOT]             = {{EVO_LEVEL, 10, SPECIES_KRICKETUNE}},
     [SPECIES_SHINX]                 = {{EVO_LEVEL, 15, SPECIES_LUXIO}},
     [SPECIES_LUXIO]                 = {{EVO_LEVEL, 30, SPECIES_LUXRAY}},
-    [SPECIES_BUDEW]                 = {{EVO_FRIENDSHIP_DAY, 0, SPECIES_ROSELIA}},
+    [SPECIES_BUDEW]                 = {{EVO_LEVEL, 20, SPECIES_ROSELIA}},
     [SPECIES_CRANIDOS]              = {{EVO_LEVEL, 30, SPECIES_RAMPARDOS}},
     [SPECIES_SHIELDON]              = {{EVO_LEVEL, 30, SPECIES_BASTIODON}},
     [SPECIES_BURMY]                 = {{EVO_LEVEL_FEMALE, 20, SPECIES_WORMADAM},
@@ -312,8 +312,8 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
                                        {EVO_NONE, 0, SPECIES_MR_MIME_GALARIAN}},
     [SPECIES_HAPPINY]               = {{EVO_ITEM_HOLD_DAY, ITEM_OVAL_STONE, SPECIES_CHANSEY},
                                        {EVO_ITEM_DAY, ITEM_OVAL_STONE, SPECIES_CHANSEY}},
-    [SPECIES_GIBLE]                 = {{EVO_LEVEL, 24, SPECIES_GABITE}},
-    [SPECIES_GABITE]                = {{EVO_LEVEL, 48, SPECIES_GARCHOMP}},
+    [SPECIES_GIBLE]                 = {{EVO_LEVEL, 16, SPECIES_GABITE}},
+    [SPECIES_GABITE]                = {{EVO_LEVEL, 32, SPECIES_GARCHOMP}},
     [SPECIES_MUNCHLAX]              = {{EVO_FRIENDSHIP, 0, SPECIES_SNORLAX}},
     [SPECIES_RIOLU]                 = {{EVO_FRIENDSHIP_DAY, 0, SPECIES_LUCARIO}},
     [SPECIES_HIPPOPOTAS]            = {{EVO_LEVEL, 34, SPECIES_HIPPOWDON}},

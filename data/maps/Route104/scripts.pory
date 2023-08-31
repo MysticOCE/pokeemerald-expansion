@@ -1,5 +1,7 @@
 script Route104_EventScript_IvanNew{
+	lock
 	msgbox(format("I've had no luck with the fish today... I'm starting to think I should reconsider my hobbies."))
+	release
 	end
 	}
 

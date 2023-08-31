@@ -1,3 +1,10 @@
+RustboroCity_BlackBelt_TypeChanges::
+	lock
+	msgbox RustboroCity_BlackBelt_TypeChanges_Text_0
+	release
+	end
+
+
 RustboroCity_OddTMMerchant::
 	lock
 	message RustboroCity_OddTMMerchant_Text_0
@@ -1314,6 +1321,20 @@ RustboroCity_Text_YouCanHave2On2Battle:
 	.string "they'll both challenge you.\p"
 	.string "Don't you think it'd be cool if you\n"
 	.string "could beat two TRAINERS by yourself?$"
+
+RustboroCity_BlackBelt_TypeChanges_Text_0:
+	.string "Hrm... Types sure are different from\n"
+	.string "when I was in school. Nowadays, Ice\l"
+	.string "resists Water, Fairy and is immune to\l"
+	.string "Ice!\p"
+	.string "Poison is immune to Poison and is\n"
+	.string "effective against Water...\p"
+	.string "Bug is resistant to Ghost and works\n"
+	.string "okay against Ghost types...\p"
+	.string "Normal types are um, resistant to Fairy\n"
+	.string "attacks?\p"
+	.string "I'll just keep repeating these to\n"
+	.string "myself until I remember them...$"
 
 RustboroCity_OddTMMerchant_Text_0:
 	.string "Howdy there. In the market for some\n"

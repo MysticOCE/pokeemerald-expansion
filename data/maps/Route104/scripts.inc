@@ -1,5 +1,7 @@
 Route104_EventScript_IvanNew::
+	lock
 	msgbox Route104_EventScript_IvanNew_Text_0
+	release
 	end
 
 
