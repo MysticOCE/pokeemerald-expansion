@@ -2,6 +2,7 @@ script ProfessorBirchMatchCallCaughtChecks {
 	//ScriptContext_SetupScript is the call to call a script from the C code
 	//callnative is the method to get C code from poryscript, only works for void functions
 	//BufferPokedexRatingForMatchCall is a good reference
+	//https://github.com/pret/pokefirered/blob/f484b96062f866d00c28bec5b33b032e14280ea1/data/maps/Route10_PokemonCenter_1F/scripts.inc#L36
 }
 
 raw `
