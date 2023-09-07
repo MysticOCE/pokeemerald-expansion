@@ -1089,8 +1089,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_BUTTERFREE] =
     {
-        .baseHP        = 90,
-        .baseAttack    = 50,
+        .baseHP        = 80,
+        .baseAttack    = 60,
         .baseDefense   = 55,
         .baseSpeed     = 100,
         .baseSpDefense = 100,

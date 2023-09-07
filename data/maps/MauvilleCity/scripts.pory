@@ -1,3 +1,16 @@
+script MauvilleCity_EventScript_BulldozeTMMan {
+	lock
+	if(flag(FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT) == FALSE){	
+		msgbox(format("Whoa... I was trying to teach myself Rollout but I think I taught myself Body Slam instead!\p I should probably try not to avoid crashing into walls so much... \p Here, you can try learning this. I'm going to get back to trying to Rollout properly..."))
+		giveitem(ITEM_TM57)
+		setflag(FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT)
+		}
+	else {
+		msgbox(format("Urp... I feel dizzy..."))
+	}
+	release
+}
+
 raw `
 .set LOCALID_WALLY, 6
 .set LOCALID_WALLYS_UNCLE, 7

@@ -1,3 +1,18 @@
+MauvilleCity_EventScript_BulldozeTMMan::
+	lock
+	goto_if_unset FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT, MauvilleCity_EventScript_BulldozeTMMan_2
+	msgbox MauvilleCity_EventScript_BulldozeTMMan_Text_1
+MauvilleCity_EventScript_BulldozeTMMan_1:
+	release
+	return
+
+MauvilleCity_EventScript_BulldozeTMMan_2:
+	msgbox MauvilleCity_EventScript_BulldozeTMMan_Text_0
+	giveitem ITEM_TM57
+	setflag FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT
+	goto MauvilleCity_EventScript_BulldozeTMMan_1
+
+
 .set LOCALID_WALLY, 6
 .set LOCALID_WALLYS_UNCLE, 7
 .set LOCALID_SCOTT, 11
@@ -665,3 +680,16 @@ MauvilleCity_Text_ExplainTV:
 
 MauvilleCity_Text_BeenCheckingOutTV:
 	.string "Hi, have you been checking out TVs?$"
+
+MauvilleCity_EventScript_BulldozeTMMan_Text_0:
+	.string "Whoa... I was trying to teach myself\n"
+	.string "Rollout but I think I taught myself\l"
+	.string "Body Slam instead!\p"
+	.string "I should probably try not to avoid\n"
+	.string "crashing into walls so much...\p"
+	.string "Here, you can try learning this. I'm\n"
+	.string "going to get back to trying to Rollout\l"
+	.string "properly...$"
+
+MauvilleCity_EventScript_BulldozeTMMan_Text_1:
+	.string "Urp... I feel dizzy...$"
